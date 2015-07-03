@@ -5,6 +5,7 @@ MAINTAINER Johann du Toity <johann@impulsecloud.com.au>
 RUN apt-get update && apt-get install -y \
   build-essential \
   git \
+  postgresql-client \
   python \
   python-dev \
   python-setuptools \
