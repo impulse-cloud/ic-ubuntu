@@ -16,5 +16,10 @@ RUN apt-get update && apt-get install -y \
   sqlite3 && \
   easy_install pip && \
   ln -s /usr/include/freetype2 /usr/include/freetype && \
+  locale-gen en_US.UTF-8 && \
   apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
+# Set the locale
+ENV LANG en_US.UTF-8  
+ENV LANGUAGE en_US:en  
+ENV LC_ALL en_US.UTF-8  
