@@ -4,6 +4,7 @@ MAINTAINER Johann du Toity <johann@impulsecloud.com.au>
 
 RUN apt-get update && apt-get install -y \
   build-essential \
+  curl \
   git \
   postgresql-client \
   python \
@@ -13,7 +14,8 @@ RUN apt-get update && apt-get install -y \
   libxslt1-dev \
   libz-dev \
   libpq-dev \
-  sqlite3 && \
+  sqlite3 \ 
+  wget && \
   easy_install pip && \
   ln -s /usr/include/freetype2 /usr/include/freetype && \
   locale-gen en_US.UTF-8 && \
