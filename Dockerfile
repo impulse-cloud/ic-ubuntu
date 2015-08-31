@@ -1,4 +1,4 @@
-FROM ubuntu:14.04.2
+FROM ubuntu:15.04
 
 MAINTAINER Johann du Toity <johann@impulsecloud.com.au>
 
