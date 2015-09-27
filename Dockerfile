@@ -27,7 +27,7 @@ RUN apt-get update && apt-get install -y \
   easy_install pip && \
   ln -s /usr/include/freetype2 /usr/include/freetype && \
   locale-gen en_US.UTF-8 && \
-  wget -O /tmp/wkhtmltox.deb http://download.gna.org/wkhtmltopdf/0.12/0.12.2.1/wkhtmltox-0.12.2.1_linux-trusty-amd64.deb && \
+  wget --quiet -O /tmp/wkhtmltox.deb http://download.gna.org/wkhtmltopdf/0.12/0.12.2.1/wkhtmltox-0.12.2.1_linux-trusty-amd64.deb && \
   dpkg -i /tmp/wkhtmltox.deb && \
   apt-get install -f -y && \
   apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
