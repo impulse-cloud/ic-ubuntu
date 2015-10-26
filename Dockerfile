@@ -10,6 +10,8 @@ RUN apt-get update && apt-get install -y \
   python \
   python-dev \
   python-setuptools \
+  libffi-dev \
+  libssl-dev \
   libxml2-dev \
   libxslt1-dev \
   libz-dev \
