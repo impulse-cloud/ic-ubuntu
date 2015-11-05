@@ -26,6 +26,7 @@ RUN apt-get update && apt-get install -y \
   postgresql-client \
   python \
   python-dev \
+  python-numpy \
   python-setuptools \
   python-tk \
   sqlite3 \
