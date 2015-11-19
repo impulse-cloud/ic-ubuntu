@@ -30,6 +30,7 @@ RUN apt-get update && apt-get install -y \
   python-setuptools \
   python-tk \
   sqlite3 \
+  sudo \
   tcl8.6-dev \
   tk8.6-dev \
   wget \
