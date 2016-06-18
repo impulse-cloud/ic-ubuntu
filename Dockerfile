@@ -24,10 +24,10 @@ RUN apt-get update && apt-get install -y \
   libtiff5-dev \
   libz-dev \
   postgresql-client \
-  python \
-  python-dev \
-  python-setuptools \
-  python-tk \
+  python3-dev \
+  python3-pip \
+  python3-setuptools \
+  python3-tk \
   sqlite3 \
   sudo \
   tcl8.6-dev \
@@ -36,7 +36,6 @@ RUN apt-get update && apt-get install -y \
   xfonts-base \
   xfonts-75dpi \
   zlib1g-dev && \
-  easy_install pip && \
   ln -s /usr/include/freetype2 /usr/include/freetype && \
   locale-gen en_US.UTF-8 && \
   wget --quiet -O /tmp/wkhtmltox.deb http://download.gna.org/wkhtmltopdf/0.12/0.12.2.1/wkhtmltox-0.12.2.1_linux-trusty-amd64.deb && \
