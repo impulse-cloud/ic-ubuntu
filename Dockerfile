@@ -1,6 +1,6 @@
-FROM ubuntu:15.10
+FROM ubuntu:16.04
 
-MAINTAINER Johann du Toity <johann@impulsecloud.com.au>
+MAINTAINER Johann du Toit <johann@winkreports.com>
 
 RUN apt-get update && apt-get install -y \
   build-essential \
