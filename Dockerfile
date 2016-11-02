@@ -7,6 +7,7 @@ RUN apt-get update && apt-get install -y \
   curl \
   fontconfig \
   git \
+  ghostscript \
   libffi-dev \
   libfontconfig1 \
   libfreetype6 \
