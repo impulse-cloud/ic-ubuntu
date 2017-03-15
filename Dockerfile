@@ -8,6 +8,7 @@ RUN apt-get update && apt-get install -y \
   fontconfig \
   git \
   ghostscript \
+  iputils-ping \
   libffi-dev \
   libfontconfig1 \
   libfreetype6 \
