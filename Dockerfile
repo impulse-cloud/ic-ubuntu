@@ -25,6 +25,7 @@ RUN apt-get update && apt-get install -y \
   libxslt1-dev \
   libtiff5-dev \
   libz-dev \
+  locales \
   postgresql-client \
   python3-dev \
   python3-pip \
