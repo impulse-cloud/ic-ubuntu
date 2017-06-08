@@ -34,6 +34,7 @@ RUN apt-get update && apt-get install -y \
   sudo \
   tcl8.6-dev \
   tk8.6-dev \
+  vim \
   wget \
   xfonts-base \
   xfonts-75dpi \
