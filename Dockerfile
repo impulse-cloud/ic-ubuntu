@@ -37,12 +37,18 @@ RUN apt-get update && apt-get install -y \
   tk8.6-dev \
   vim \
   wget \
-  wkhtmltopdf \
   xfonts-base \
   xfonts-75dpi \
   zlib1g-dev && \
   ln -s /usr/include/freetype2 /usr/include/freetype && \
   locale-gen en_US.UTF-8 && \
+  wget --quiet -O /tmp/wkhtmltox.tar.xz https://downloads.wkhtmltopdf.org/0.12/0.12.4/wkhtmltox-0.12.4_linux-generic-amd64.tar.xz && \
+  cd /tmp && \
+  tar -xf wkhtmltox.tar.xz && \
+  cd wkhtmltox/bin && \
+  mv wkhtmltopdf /usr/bin/wkhtmltopdf && \
+  mv wkhtmltoimage /usr/bin/wkhtmltoimage && \
+  cd / && \
   pip3 install numpy && \
   apt-get install -f -y && \
   apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
