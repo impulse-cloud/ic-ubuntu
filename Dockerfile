@@ -1,6 +1,8 @@
-FROM ubuntu:16.04
+FROM ubuntu:18.04
 
 MAINTAINER Johann du Toit <johann@winkreports.com>
+
+ENV DEBIAN_FRONTEND=noninteractive
 
 RUN apt-get update && apt-get install -y \
   build-essential \
@@ -16,7 +18,7 @@ RUN apt-get update && apt-get install -y \
   libjpeg-turbo8 \
   libjpeg8-dev \
   liblcms2-dev \
-  libpng12-0 \
+  libpng-dev \
   libpq-dev \
   libssl-dev \
   libwebp-dev \
@@ -25,6 +27,7 @@ RUN apt-get update && apt-get install -y \
   libxslt1-dev \
   libtiff5-dev \
   libz-dev \
+  locales \
   postgresql-client \
   python3-dev \
   python3-pip \
@@ -40,7 +43,7 @@ RUN apt-get update && apt-get install -y \
   zlib1g-dev && \
   ln -s /usr/include/freetype2 /usr/include/freetype && \
   locale-gen en_US.UTF-8 && \
-  wget --quiet -O /tmp/wkhtmltox.deb http://download.gna.org/wkhtmltopdf/0.12/0.12.2.1/wkhtmltox-0.12.2.1_linux-trusty-amd64.deb && \
+  wget --quiet -O /tmp/wkhtmltox.deb https://builds.wkhtmltopdf.org/0.12.6-dev/wkhtmltox_0.12.6-0.20180618.3.dev.e6d6f54.bionic_amd64.deb && \
   dpkg -i /tmp/wkhtmltox.deb && \
   pip3 install numpy && \
   apt-get install -f -y && \
